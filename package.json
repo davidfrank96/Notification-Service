@@ -4,7 +4,9 @@
   "description": "This is a Notification services",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production node ./dist/src/app.js",
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node -- ./src/app.js"
   },
   "repository": {
     "type": "git",
@@ -14,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^6.4.0",
+    "babel-polyfill": "^6.26.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "core-js": "^3.2.1",
