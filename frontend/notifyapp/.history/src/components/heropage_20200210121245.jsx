@@ -22,15 +22,14 @@ export default class HeroPage extends Component {
                         duration={8}
                         transition={2}
                     />
-                    <Jumbotron className="h-100 rounded-0 justify-content-center bg-transparent">
+                    <Jumbotron className="h-100 rounded-0 justify-content-center">
                         <Row className="justify-content-center h-100 pl-5 pt-5 mt-5 py-5 px-5 mx-5 my-5">
                             <Col lg="12" md="12" sm="12">
                                 <Row className="h-100 justify-content-center">
                                     <Col lg="6" md="6" sm="12" className="h-100 justify-content-center">
-                                        {" "}
-                                        {/* <h2 className="bold text-capitalize text-center text-dark">
+                                        <h2 className="text-light bold text-capitalize text-center">
                                             Stay on the wheel!
-                                        </h2> */}
+                                        </h2>
                                     </Col>
                                 </Row>
                             </Col>

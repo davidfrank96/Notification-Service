@@ -27,7 +27,6 @@ export default class HeroPage extends Component {
                             <Col lg="12" md="12" sm="12">
                                 <Row className="h-100 justify-content-center">
                                     <Col lg="6" md="6" sm="12" className="h-100 justify-content-center">
-                                        {" "}
                                         {/* <h2 className="bold text-capitalize text-center text-dark">
                                             Stay on the wheel!
                                         </h2> */}
