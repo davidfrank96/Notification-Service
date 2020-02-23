@@ -29,7 +29,7 @@ export default class HeroPage extends Component {
                                 <InputGroup>
                                     <Input placeholder="Enter Vehicle Registeration" className="rounded-pill text-center"/>
                                     <InputGroupAddon prefix className="rounded-pill">
-                                        <Button color="transparent" active><FiSearch size={25} color="#17A2B8"/></Button>
+                                        <Button color="transparent" active><FiSearch size={25} color="white"/></Button>
                                     </InputGroupAddon>
                                 </InputGroup>
                             </Col>

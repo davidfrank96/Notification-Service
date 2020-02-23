@@ -9,7 +9,7 @@ import bgimg5 from "../assets/images/speed-car.jpg";
 import bgimg6 from "../assets/images/speed.jpg";
 import InputGroup from "reactstrap/lib/InputGroup";
 import Input from "reactstrap/lib/Input";
-import {FiSearch} from "react-icons/fi";
+import FiSearch from "react-icons/fi";
 
 import BackgroundSlider from 'react-background-slider'
 
@@ -27,9 +27,9 @@ export default class HeroPage extends Component {
                         <Row className="justify-content-center mx-5 pt-5 mt-5 py-5 my-5">
                             <Col lg="5" md="6" sm="12" className="justify-content-center">
                                 <InputGroup>
-                                    <Input placeholder="Enter Vehicle Registeration" className="rounded-pill text-center"/>
-                                    <InputGroupAddon prefix className="rounded-pill">
-                                        <Button color="transparent" active><FiSearch size={25} color="#17A2B8"/></Button>
+                                    <Input placeholder="ENTER REG" />
+                                    <InputGroupAddon prefix>
+                                        <Button color="primary" active><FiSearch size={30}/></Button>
                                     </InputGroupAddon>
                                 </InputGroup>
                             </Col>

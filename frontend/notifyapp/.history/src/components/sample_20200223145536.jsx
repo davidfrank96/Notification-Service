@@ -54,7 +54,7 @@ export default class Sample extends Component {
                                 </div>
                                 <Row style={{ borderTop: "3px dashed grey"}} className="justify-content-center w-100 text-black50 text-left">
                                     <Col className="justify-content-center">
-                                        <p className="font-weight-light" style={{ fontSize: "0.7em" }}>It is vital that you check the above 3 details before you purchase this vehicle. If you are stuck with the above 3 checks then follow this guide!</p>
+                                        <p className="font-weight-light" style={{ fontSize: "0.7em" }}>Please read your deluxe check carefully to ensure you fully understand all the information shown. If you have any questions regarding your deluxe check please contact us and we will be happy to help.</p>
                                     </Col>
                                 </Row>
                             </Col>

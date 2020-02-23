@@ -49,14 +49,7 @@ export default class Sample extends Component {
 
                             </Col>
                             <Col className="justify-content-center">
-                                <div className="mt-5">
-                                    <h2 className="text-primary"><b>Your Checks</b></h2>
-                                </div>
-                                <Row style={{ borderTop: "3px dashed grey"}} className="justify-content-center w-100 text-black50 text-left">
-                                    <Col className="justify-content-center">
-                                        <p className="font-weight-light" style={{ fontSize: "0.7em" }}>It is vital that you check the above 3 details before you purchase this vehicle. If you are stuck with the above 3 checks then follow this guide!</p>
-                                    </Col>
-                                </Row>
+                                hello
                             </Col>
                         </Row>
                     </Row>
