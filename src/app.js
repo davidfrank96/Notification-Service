@@ -7,6 +7,7 @@ import bodyParser from 'body-parser';
 //import ErrorHandler from './middlewares/ErrorHandler';
 import apiRoutes from './routes';
 
+
 config();
 
 const app = express();
@@ -21,6 +22,8 @@ app.use(
 );
 
 app.use('/api', apiRoutes);
+//app.use(userRoute);
+
 app.use('*', (req, res) =>
   res.status(404).json({
     status: 404,

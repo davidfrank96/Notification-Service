@@ -1,8 +1,12 @@
 import express from 'express';
-
+import authRouter from './auth';
 
 
 const apiRoutes = express.Router();
+//const usersRouter = express.Router();
+
+//usersRouter.use('/v1/auth', authRouter);
+apiRoutes.use('/v1/auth', authRouter);
 
 apiRoutes.get('/', (req, res) =>
   res.json({

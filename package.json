@@ -4,10 +4,14 @@
   "description": "This is a Notification services",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run refreshdb:test && cross-env NODE_ENV=test nyc --require @babel/register ---reporter=html --reporter=text mocha src/test/**.test.js --timeout 20000 --exit",
     "start": "cross-env NODE_ENV=production node ./dist/src/app.js",
     "dev": "cross-env NODE_ENV=development nodemon --exec babel-node -- ./src/app.js",
-     "migration": "sequelize db:migrate"
+    "migration": "sequelize db:migrate",
+    "reverse": "sequelize db:migrate:undo:all",
+    "refreshdb:test": "cross-env NODE_ENV=test npm run refreshdb",
+     "migration:test": "cross-env NODE_ENV=test npm run migration",
+    "refreshdb": "npm run reverse && npm run migration " 
   },
   "repository": {
     "type": "git",
@@ -43,6 +47,7 @@
     "passport-local": "^1.0.0",
     "pg": "^7.12.1",
     "pg-hstore": "^2.3.3",
+    "post": "0.0.1",
     "request": "^2.87.0",
     "sequelize": "^5.15.0",
     "sequelize-cli": "^5.5.0",
@@ -50,7 +55,8 @@
     "swagger-ui-express": "^4.0.7",
     "underscore": "^1.9.1",
     "uuid": "^3.3.3",
-    "uuidv4": "^4.0.0"
+    "uuidv4": "^4.0.0",
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
