@@ -4,7 +4,7 @@ import { hashPassword, generateVerificationToken } from '../utils/helpers';
 //import sendVerification from '../services';
 import constants from '../utils/constants/constants';
 
-const { Users, Validate } = models;
+const { User, Validate } = models;
 
 /**
  * The signup controller
@@ -28,24 +28,27 @@ export const signup = async (req, res) => {
   password = hashPassword(password);
 
   const userPayload = {
+    
     firstname,
     lastname,
     email,
     phone,
     password
   };
+
   const verificationToken = generateVerificationToken();
   try {
-    let user = await Users.create(userPayload);
+    let user = await User.create(userPayload);
 
-    sendVerification(email, verificationToken);
+   // sendVerification(email, verificationToken);
 
     user = user.dataValues;
     const signupVerifyPayload = {
       userId: user.userId,
       token: verificationToken
     };
-    await Validate.create(signupVerifyPayload);
+    //await Validate.create(signupVerifyPayload);
+    
     const jwtToken = await Auth.signJwt({ id: user.userId, isAdmin });
     res.status(201).json({
       status: 201,
@@ -62,6 +65,7 @@ export const signup = async (req, res) => {
       }
     });
   } catch (err) {
+    //console.log(err);
     res.status(500).json({ status: 500, error: 'Internal server error' });
   }
 };

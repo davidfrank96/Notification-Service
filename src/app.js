@@ -22,7 +22,7 @@ app.use(
 );
 
 app.use('/api', apiRoutes);
-app.use(userRoute);
+//app.use(userRoute);
 
 app.use('*', (req, res) =>
   res.status(404).json({
