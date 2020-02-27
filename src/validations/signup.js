@@ -37,11 +37,11 @@ const signupValidator = [
         .withMessage(`password ${signupErrors.alphaNumericPassword}`),
     check('phone')
         .exists({ checkFalsy: true })
-        .withMessage(`phone ${signupErrors.undefinedPhone}`)
-        .isNumeric()
-        .withMessage(`phone ${signupErrors.invalidPhone}`)
-        .isLength({ min: 11, max: 11 })
-        .withMessage(`phone ${signupErrors.phoneLength}`),
+        .withMessage(`phone ${signupErrors.undefinedPhone}`),
+        //.isNumeric()
+        //.withMessage(`phone ${signupErrors.invalidPhone}`)
+        //.isLength({ min: 11, max: 20})
+        //.withMessage(`phone ${signupErrors.phoneLength}`),
 
     async (req, res, next) => {
         const { errors } = validationResult(req);
@@ -69,3 +69,4 @@ const signupValidator = [
 ];
 
 export default signupValidator;
+

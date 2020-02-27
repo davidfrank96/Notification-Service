@@ -4,11 +4,14 @@
   "description": "This is a Notification services",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run refreshdb:test && cross-env NODE_ENV=test nyc --require @babel/register ---reporter=html --reporter=text mocha src/test/**.test.js --timeout 20000 --exit",
     "start": "cross-env NODE_ENV=production node ./dist/src/app.js",
     "dev": "cross-env NODE_ENV=development nodemon --exec babel-node -- ./src/app.js",
     "migration": "sequelize db:migrate",
-    "reverse": "sequelize db:migrate:undo:all"
+    "reverse": "sequelize db:migrate:undo:all",
+    "refreshdb:test": "cross-env NODE_ENV=test npm run refreshdb",
+     "migration:test": "cross-env NODE_ENV=test npm run migration",
+    "refreshdb": "npm run reverse && npm run migration " 
   },
   "repository": {
     "type": "git",
