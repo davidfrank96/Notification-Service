@@ -1,4 +1,4 @@
-import General from './helpers/index';
+import General from './index';
 
 /**
  * A class for generating API responses
