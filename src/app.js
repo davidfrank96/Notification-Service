@@ -3,7 +3,7 @@ import express from 'express';
 import logger from 'morgan';
 import { config } from 'dotenv';
 import bodyParser from 'body-parser';
-//import 'babel-polyfill';
+import 'babel-polyfill';
 //import ErrorHandler from './middlewares/ErrorHandler';
 import apiRoutes from './routes';
 
