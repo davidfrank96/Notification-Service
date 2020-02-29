@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run refreshdb:test && cross-env NODE_ENV=test nyc --require @babel/register ---reporter=html --reporter=text mocha src/test/**.test.js --timeout 20000 --exit",
-    "start": "npm run build && node dist/app.js",
+    "start": "npm run build && node dist/app.js && migration",
     "clean": "rm -rf dist && mkdir dist",
     "build": "npm run clean && babel src -s -d dist --copy-files",
     "dev": "cross-env NODE_ENV=development nodemon --exec babel-node -- ./src/app.js",
