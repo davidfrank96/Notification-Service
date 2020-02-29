@@ -6,14 +6,15 @@
   "scripts": {
     "test": "npm run refreshdb:test && cross-env NODE_ENV=test nyc --require @babel/register ---reporter=html --reporter=text mocha src/test/**.test.js --timeout 20000 --exit",
     "start": "npm run build && node dist/app.js",
-     "clean": "rm -rf dist && mkdir dist",
+    "clean": "rm -rf dist && mkdir dist",
     "build": "npm run clean && babel src -s -d dist --copy-files",
     "dev": "cross-env NODE_ENV=development nodemon --exec babel-node -- ./src/app.js",
     "migration": "sequelize db:migrate",
     "reverse": "sequelize db:migrate:undo:all",
     "refreshdb:test": "cross-env NODE_ENV=test npm run refreshdb",
-     "migration:test": "cross-env NODE_ENV=test npm run migration",
-    "refreshdb": "npm run reverse && npm run migration " 
+    "migration:test": "cross-env NODE_ENV=test npm run migration",
+    "refreshdb": "npm run reverse && npm run migration ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "repository": {
     "type": "git",
@@ -58,13 +59,13 @@
     "underscore": "^1.9.1",
     "uuid": "^3.3.3",
     "uuidv4": "^4.0.0",
-    "yarn": "^1.22.0"
-  },
-  "devDependencies": {
+    "yarn": "^1.22.0",
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  },
+  "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "concurrently": "^4.1.2",
