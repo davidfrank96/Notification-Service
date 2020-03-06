@@ -47,16 +47,16 @@ export default class Price extends Component {
                                     </tr>
                                     <tr>
                                         <th scope="row">TAX</th>
-                                        <td><FiCheck color="green" size={40} /></td>
-                                        <td><FiCheck color="green" size={40} /></td>
-                                        <td><FiCheck color="green" size={40}/></td>
+                                        <td><FiCheck color="green" size={25} /></td>
+                                        <td><FiCheck color="green" size={25} /></td>
+                                        <td><FiCheck color="green" size={25}/></td>
                                     </tr>
 
                                     <tr>
                                         <th scope="row">Vehical Age</th>
-                                        <td><FiCheck color="green" size={40} /></td>
-                                        <td><FiCheck color="green" size={40} /></td>
-                                        <td><FiCheck color="green" size={40}/></td>
+                                        <td><FiCheck color="green" size={25} /></td>
+                                        <td><FiCheck color="green" size={25} /></td>
+                                        <td><FiCheck color="green" size={25}/></td>
                                     </tr>
                                     <tr>
                                         <th scope="row">Mileage Estimate</th>
