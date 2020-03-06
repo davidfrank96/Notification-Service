@@ -9,7 +9,7 @@ export default class Sample extends Component {
             <>
                 <div className="justify-content-center align-content-center px-5 mt-n5" id="sample">
                     
-                    <Row className="justify-content-center py-5 shadow-lg" style={{ backgroundColor: "white" }}>
+                    <Row className="justify-content-center py-5 shadow-lg" style={{ backgroundColor: "white", borderRadius:'15px' }}>
                         <Row className="mb-5 text-black-50"><h2>SAMPLE</h2></Row>
                         <Row className="justify-content-center mx-5">
                             <Col className="justify-content-center" lg="6" md="6" sm="12">

@@ -5,7 +5,7 @@ export default class Footer extends Component {
     render() {
         return (
             <>
-                <footer style={{ padding: "60px" }} className="footer text-white bg-dark">
+                <footer style={{ padding: "20px" }} className="footer text-white bg-dark">
                     <Container fluid className="justify-content-center">
                         <Row className="justify-content-center">
                             <div>
