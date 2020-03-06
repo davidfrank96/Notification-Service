@@ -27,9 +27,9 @@ export default class HeroPage extends Component {
                         <Row className="justify-content-center mx-5 pt-5 mt-5 py-5 my-5">
                             <Col lg="5" md="6" sm="12" className="justify-content-center">
                                 <InputGroup>
-                                    <Input placeholder="Enter Vehicle Registeration" className="rounded-pill text-center"/>
+                                    <Input placeholder="ENTER Vehicle REG" className="rounded-pill"/>
                                     <InputGroupAddon prefix className="rounded-pill">
-                                        <Button color="transparent" active><FiSearch size={25} color="#17A2B8"/></Button>
+                                        <Button color="transparent" active><FiSearch size={25} color="white"/></Button>
                                     </InputGroupAddon>
                                 </InputGroup>
                             </Col>

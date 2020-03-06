@@ -19,7 +19,7 @@ export default class Sample extends Component {
                                 <p className="mt-5 text-light text-black-50">Image for illustration purpose only</p>
                                 <Row className="bg-warning justify-content-center p-2">
                                     <Col className="bg-warning justify-content-center">
-                                        <h3><b>NT657EU</b></h3>
+                                        <b>NT657EU</b>
                                     </Col>
                                 </Row>
                                 <div className="mt-5">
